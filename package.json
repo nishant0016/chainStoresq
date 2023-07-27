@@ -1,0 +1,18 @@
+{
+  "name": "server1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mainFile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node mainFile.js"
+  },
+  "keywords": ["node","build"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.1"
+  }
+}
