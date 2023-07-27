@@ -113,8 +113,8 @@ app.get("/products/:id",function(req,res){
 app.post("/products", function(req, res) {
     let body = req.body;
     console.log("inside post");
-    let arr = [body.productName,body.category,body.description];
-    let sql = "INSERT INTO products (productName,category,description) VALUES ($1, $2,$3)";
+    let arr = [body.productname,body.category,body.description];
+    let sql = "INSERT INTO products (productname,category,description) VALUES ($1, $2,$3)";
     client.query(sql, arr, function(err, result) { 
         if (err) {
             console.log(err);
