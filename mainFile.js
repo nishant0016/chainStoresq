@@ -129,8 +129,8 @@ app.put("/products/:id",function(req,res){
     let body = req.body;
     let id= req.params.id;
     console.log("inside post");
-    let arr = [body.productName,body.category,body.description,id];
-    let sql = "UPDATE products SET productName=$1,category=$2,description=$3 WHERE productid=$4" ;
+    let arr = [body.productname,body.category,body.description,id];
+    let sql = "UPDATE products SET productname=$1,category=$2,description=$3 WHERE productid=$4" ;
     client.query(sql, arr, function(err, result) { 
         if (err) {
             console.log(err);
