@@ -151,8 +151,9 @@ app.get("/purchases",function (req,res){
         else {
             let purchases=result.rows;
             if (shop) {
-                purchases = purchases.filter((purchase) => purchase.shopid === shop);
+                purchases = purchases.filter((purchase) => purchase.shopid == shop);
             }
+            console.log(purchases[shop],shop)
             if (product) {
                 product=product.split(',');
                 purchases = purchases.filter((purchase) => product.find(pd1=>pd1==purchase.productid));
